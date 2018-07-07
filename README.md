@@ -2,6 +2,7 @@
 
 Adds the following feature(s):
 - Prefix on MySQL Database Tables.
+- Proper UTF8 Encoding in MySQL Database Tables.
 
 ---
 
