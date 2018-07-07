@@ -18,7 +18,8 @@ public enum SQLQuery {
             "`start` LONG DEFAULT NULL," +
             "`end` LONG DEFAULT NULL," +
             "`calculation` VARCHAR(50) NULL DEFAULT NULL," +
-            "PRIMARY KEY (`id`))",
+            "PRIMARY KEY (`id`))" +
+            "COLLATE='utf8_general_ci'",
 
             "CREATE TABLE IF NOT EXISTS Punishments (" +
             "id INTEGER IDENTITY PRIMARY KEY," +
@@ -42,7 +43,8 @@ public enum SQLQuery {
             "`start` LONG DEFAULT NULL," +
             "`end` LONG DEFAULT NULL," +
             "`calculation` VARCHAR(50) NULL DEFAULT NULL," +
-            "PRIMARY KEY (`id`))",
+            "PRIMARY KEY (`id`))"+
+            "COLLATE='utf8_general_ci'",
 
             "CREATE TABLE IF NOT EXISTS PunishmentHistory (" +
             "id INTEGER IDENTITY PRIMARY KEY," +
