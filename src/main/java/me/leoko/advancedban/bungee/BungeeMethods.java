@@ -31,7 +31,6 @@ import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
-import org.bstats.bungeecord.Metrics;
 
 /**
  * Created by Leoko @ dev.skamps.eu on 23.07.2016.
@@ -281,6 +280,7 @@ public class BungeeMethods implements MethodInterface {
         mysql.set("MySQL.Username", "root");
         mysql.set("MySQL.Password", "pw123");
         mysql.set("MySQL.Port", 3306);
+        mysql.set("MySQL.Prefix", "AB_");
         try {
             ConfigurationProvider.getProvider(YamlConfiguration.class).save(mysql, file);
         } catch (IOException e) {

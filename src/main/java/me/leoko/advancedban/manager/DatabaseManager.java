@@ -13,6 +13,9 @@ import me.leoko.advancedban.utils.SQLQuery;
 
 public class DatabaseManager {
 
+    public String tableNamePunishment = "Punishments";
+    public String tableNamePunishmentHistory = "PunishmentHistory";
+
     private String ip;
     private String dbName;
     private String usrName;
@@ -56,6 +59,9 @@ public class DatabaseManager {
                 password = mi.getString(mi.getMySQLFile(), "MySQL.Password", "Unknown");
                 port = mi.getInteger(mi.getMySQLFile(), "MySQL.Port", 3306);
                 prefix = mi.getString(mi.getMySQLFile(), "MySQL.Prefix", ""); //empty string as default for backwards compat.
+
+                tableNamePunishment = prefix + tableNamePunishment;
+                tableNamePunishmentHistory = prefix + tableNamePunishmentHistory;
 
                 connectMySQLServer();
             }
